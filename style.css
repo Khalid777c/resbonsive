@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+header{
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    padding: 0 5rem;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.humburger{
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (max-width:900px){
+    header{
+        padding: 0 3rem;
+        position: relative;
+    }
+    .humburger {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        width: 45px;
+        height: 45px;
+        position: relative;
+      }
+      .humburger i{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .humburger i.active{
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+      .navbar{
+        position: absolute;
+        background-color: #333;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        padding: 0 3rem;
+        opacity: 0;
+        transition: 0.3s;
+      }
+     .active{
+        opacity: 1;
+      }
+      .navbar ul{
+        display: block;
+      }
+      .navbar ul li{
+        margin: 20px 0;
+        border-bottom: 1px solid #a4a4a4;
+        padding-bottom: 10px;
+      }
+      .navbar ul li:last-child{
+        border-bottom: none;
+      }
+      .navbar ul li a{
+        margin: 0;
+      }
+}
